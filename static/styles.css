@@ -1,0 +1,179 @@
+/* Palenke Vision - Diseño Oficial con Menú y Redes */
+
+/* Estilo Base */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: 'Arimo', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header con Fondo Habana */
+#cabecera {
+    position: relative;
+    /* Mantenemos tu imagen IA brillante al 15% para que se vea el horizonte */
+    background: #222 url('/static/imagen/fondo_habana.jpg') no-repeat center 15%;
+    background-size: cover;
+
+    /* Padding ajustado para que el logo y letras queden en el medio del fondo */
+    padding: 100px 20px 180px 20px;
+
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Capa invisible para brillo total de la IA */
+#cabecera::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.0);
+    z-index: 1;
+}
+
+/* --- ELEMENTOS DEL LOGO --- */
+.logo-palenque {
+    position: relative;
+    z-index: 2;
+    width: 250px; /* Tamaño grande e impactante */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* --- TEXTOS (Estilo Palenque Visión ajustado a tu web) --- */
+#cabecera h1,
+#cabecera p,
+.site-description,
+.menu-navegacion,
+.redes-sociales {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+}
+
+#cabecera h1 a {
+    color: #ffffff !important; /* Blanco puro */
+    text-decoration: none;
+    font-size: 34px; /* Tamaño perfecto: ni muy grande ni muy pequeño */
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    display: block;
+}
+
+.site-description {
+    color: #ffffff !important; /* Blanco puro */
+    font-size: 15px; /* Tamaño sutil */
+    font-weight: 400;
+    margin-top: 5px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+}
+
+/* --- MENÚ DE NAVEGACIÓN --- */
+.menu-navegacion {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.menu-navegacion a:hover {
+    color: #0088cc;
+}
+
+/* --- REDES SOCIALES --- */
+.redes-sociales {
+    margin-top: 20px;
+}
+
+.redes-sociales img {
+    width: 22px;
+    margin: 0 10px;
+    filter: brightness(0) invert(1); /* Iconos blancos */
+    transition: 0.3s;
+}
+
+.redes-sociales img:hover {
+    transform: scale(1.1);
+}
+
+/* --- LA RAYA AZUL --- */
+.raya-azul {
+    height: 4px;
+    background-color: #0088cc;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    margin-top: -4px;
+}
+
+/* --- GRID Y CARTELES (No tocado para que no se rompa la web) --- */
+.contenedor-grid {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.cartel {
+    position: relative;
+    width: 350px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pieza-invisible {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.cartel img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.info-cartel {
+    padding: 20px;
+    border-top: 5px solid #0088cc;
+}
+
+.info-cartel h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.cartel:hover {
+    transform: translateY(-8px);
+}
